@@ -1,7 +1,7 @@
-Query to user table in MySql: 
-CREATE TABLE mydb2.user (
-  _id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255),
-  profession VARCHAR(255),
-  PRIMARY KEY (_id)
+Query to create user table in MySql: <br><br>
+CREATE TABLE mydb2.user (<br>
+  _id INT NOT NULL AUTO_INCREMENT,<br>
+  name VARCHAR(255),<br>
+  profession VARCHAR(255),<br>
+  PRIMARY KEY (_id)<br>
 );
