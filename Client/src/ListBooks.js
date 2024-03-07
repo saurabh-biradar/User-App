@@ -38,7 +38,7 @@ export default function ListBooks() {
 
   function deleteUser(index) {
     console.log("Delete called on Book with Id:" + index);
-    let id = users[index].id;
+    let id = users[index]._id;
     axios
       .delete(url + "user/" + id)
       .then((res) => {
@@ -51,7 +51,7 @@ export default function ListBooks() {
   }
 
   function editUser(index, newUser) {
-    let id = users[index].id;
+    let id = users[index]._id;
     axios
       .put(url + "user/" + id, { id: id, ...newUser })
       .then((res) => console.log(res.status))
@@ -103,7 +103,7 @@ export default function ListBooks() {
                   {users.map((user, index) => {
                     return (
                       <User
-                        key={user.id}
+                        key={user._id}
                         index={index}
                         user={user}
                         deleteUser={deleteUser}
